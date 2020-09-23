@@ -1,0 +1,61 @@
+<html>
+	<head>
+		<link href= "{{ url_for('static',filename='styles/style.css')}}" rel="stylesheet" type="text/css" >
+	</head>
+	
+	<body>
+		<div class="titulo">
+			<tittle>Bienvenido a SmartLab!</tittle>
+			<img class="imagen" src="{{url_for('static', filename='img/Raspi.png')}}">	
+		</div>
+		<section class="tablas">
+		<div class="divtabla1">
+			<h1>Dispositivos dentro de la sala</h1>
+			<table class="tabla1" border=1 style="text-align:center;">
+				<thead class = "tabla1">
+					<td>Direccion MAC</td>
+					<td>Proveedor del chip de red</td>
+					<td>Rssi</td>
+					<td>Fecha y Hora</td>
+				</thead>
+				{% for row in rowsNoR %}
+					<tr class="rows">
+						<td>{{row["mac"]}}</td>
+						<td>{{row["mac_info"]}}</td>
+						<td>{{row["rssi"]}}</td>
+						<td>{{row["fechaHora"]}}</td>
+					</tr>
+				{%endfor%}
+			</table>
+		</div>
+		<div class="divtabla2">
+			<h1 class ="tab">Dispositivos cercanos a la sala</h1>
+			<table class="tabla2" border=1 style="text-align:center;">
+				<thead class="tabla2">
+					<td>Direccion MAC</td>
+					<td>Proveedor del chip de red</td>
+					<td>Rssi</td>
+					<td>Fecha y Hora</td>
+				</thead>
+				{% for row in rowsR %}
+					<tr class="rows">
+						<td>{{row["mac"]}}</td>
+						<td>{{row["mac_info"]}}</td>
+						<td>{{row["rssi"]}}</td>
+						<td>{{row["fechaHora"]}}</td>
+					</tr>
+				{%endfor%}
+			</table>
+		</div>
+		</section>
+		<section class="resultado">
+			{% for row in configRes %}
+				<h1 style="text-align:left;" >Nombre de la sala: {{row["nombre"]}}</h1>
+				<h1 style="text-align:left;" >Aforo: {{row["aforo"]}}</h1>
+				<h1 style="text-align:left;" >Tipo de sala: {{row["tam"]}}</h1>
+				<h1 style="text-align:left;" >Numero total de ocupantes de la sala: {{res}}</h1>
+				<h1 style="text-align:left;" > <a href ="/"> Configurar una nueva sala  </a> </h1>
+			{%endfor%}
+		</section>
+	</body>
+</html>

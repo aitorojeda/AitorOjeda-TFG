@@ -1,0 +1,32 @@
+<html>
+	<head>
+		<link href= "{{ url_for('static',filename='styles/style.css')}}" rel="stylesheet" type="text/css" >
+	</head>
+	<body>
+		<div class="titulo">
+			<tittle>Configuracion de la sala</tittle>	
+		</div>
+			<div class="formulario" align="center">
+				<form class ="form"  action="{{ url_for('Respuesta')}}" method="POST">
+					<label for="fNombreSala">Nombre de la sala: </label><br>
+					<input type="text" name="nombreSala" required><br>
+					<label for="fAforoSala">Aforo de la sala: </label><br>
+					<input type="text" name="aforoSala" required><br>
+					<label for="tam">Tipo de sala: </label><br>
+					<select name="tam">
+						<option name="peq">pequenia</option>
+						<option name="med">mediana</option>
+						<option name="gra">grande</option>
+					</select>
+					<input type="submit" name ="submit" value="Guardar">
+				</form>
+			</div>
+		
+		
+			
+		
+	</body>
+
+
+
+</html>
