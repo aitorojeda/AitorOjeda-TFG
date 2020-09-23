@@ -1,0 +1,5 @@
+#!/bin/bash
+echo "Ejecutando programa 1 en segundo plano"
+python3 tempo.py &
+echo "Ejecutando programa principal"
+python3 sniff.py
