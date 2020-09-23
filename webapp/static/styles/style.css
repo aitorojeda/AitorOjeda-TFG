@@ -1,0 +1,92 @@
+body{
+background-color:#23aeff;
+}
+.titulo{
+text-align: center;
+font: 100% sans-serif;
+font-size:200%;
+
+}
+img{
+text-align: center;
+font: 100% sans-serif;
+font-size:200%;
+
+}
+table{
+width:auto;
+margin-right: 20px;
+margin-left:auto;
+margin-top:20px;
+font-family: Verdana, sans-serif;
+background-color:#ffffff;
+border-color:black;
+}
+
+thead{
+background-color: #4CAF50;
+padding: 10px;
+}td {
+padding: 10px;
+text-align: center;
+}
+h1{
+text-align:center;
+}
+h1{
+text-align:center;
+margin-right:20px;
+font:20px sans-serif;
+}
+section.tablas{
+float:right;}
+.adre{
+size:30px;
+text-align:left;}
+img{
+width:80px;
+height:75px;}
+section.resultado{
+text-align: left;
+font-size: 50px;
+margin-top: 30px;
+}
+form.form{
+font-family: Verdana,sans-serif;
+width: 40%;
+background-color:#f2f2f2;
+border-radius:5px;
+margin-left:auto;
+margin-right:auto;
+
+}
+.formulario{
+border-radius:5px;
+padding:20px;
+margin-top:20px;
+}
+
+input[type=text],select{
+width: 70%;
+font-family: Verdana,sans-serif;
+padding: 12px 20px;
+margin: 8px;
+border: 1px solid #ccc;
+border-radius: 4px;
+margin-top:15px;
+display: inline-block;}
+input[type=submit]{
+width: 70%;
+font-family: Verdana,sans-serif;
+padding: 12px 20px;
+margin: 8px;
+border: none;
+border-radius: 4px;
+background-color: #4CAF50;
+color: white;
+cursor:pointer;
+margin-bottom:20px;}
+label{
+margin-top:10px;}
+
+
